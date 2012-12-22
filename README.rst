@@ -1,10 +1,10 @@
-Drupal on dotCloud
+Wordpress on dotCloud
 ==================
 
-This is the easiest way to launch a Drupal website on dotCloud it takes 
-less than 2 minutes to get your Drupal site in the Cloud.
+This is the easiest way to launch a Wordpress website on dotCloud it takes 
+less than 2 minutes to get your Wordpress site in the Cloud.
 It works out of the box follow these easy steps and in the end you'll have
-your Drupal site running on dotCloud.
+your Wordpress site running on dotCloud.
 
 To run this code on dotCloud, you need a FREE `dotCloud account
 <https://www.dotcloud.com/register.html>`_ .
@@ -14,12 +14,12 @@ Install our `CLI
 (Command Line Interface)
 Then clone this repository, and push it to dotCloud::
 
-  $ git clone git://github.com/Donaldd/drupal-on-dotcloud.git
-  $ cd drupal-on-dotcloud
-  $ dotcloud create mydrupalapp 
+  $ git clone git://github.com/Donaldd/wordpress-on-dotcloud.git
+  $ cd wordpress-on-dotcloud
+  $ dotcloud create mywordpressapp 
   $ dotcloud push
 
-Your Drupal site is now running on dotCloud, to finalize your Drupal setup 
+Your Wordpress site is now running on dotCloud, to finalize your Wordpress setup 
 simply run::
   $ dotcloud open
 
