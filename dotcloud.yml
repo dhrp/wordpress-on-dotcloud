@@ -1,9 +1,6 @@
 www:
   type: php
-  config:
-    smtp_relay_server: smtp.gmail.com
-    smtp_relay_port: 587
-    smtp_relay_username: donald.donckers@gmail.com
-    smtp_relay_password: rrDhpq45!
+  approot: drupal
+  postinstall: ../postinstall.php
 db:
   type: mysql
