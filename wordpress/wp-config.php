@@ -1,14 +1,13 @@
 <?php
-$services = getenv("VCAP_SERVICES");
-$services_json = json_decode($services,true);
-$mysql_config = $services_json["mysql-5.1"][0]["credentials"];
+// Read the file and convert the underlying JSON dictionary into a PHP array
+$env = json_decode(file_get_contents("/home/dotcloud/environment.json"), true); 
 
 // ** MySQL settings from resource descriptor ** //
-define('DB_NAME', $mysql_config["name"]);
-define('DB_USER', $mysql_config["user"]);
-define('DB_PASSWORD', $mysql_config["password"]);
-define('DB_HOST', $mysql_config["hostname"]);
-define('DB_PORT', $mysql_config["port"]);
+define('DB_NAME', 'wordpress');
+define('DB_USER', $env['DOTCLOUD_DB_MYSQL_LOGIN']);
+define('DB_PASSWORD', $env['DOTCLOUD_DB_MYSQL_PASSWORD']);
+define('DB_HOST', $env['DOTCLOUD_DB_MYSQL_HOST']);
+define('DB_PORT', $env['DOTCLOUD_DB_MYSQL_PORT']);
 
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
