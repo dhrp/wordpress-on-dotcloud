@@ -12,15 +12,15 @@ Install the `CLI
 (Command Line Interface)
 Then clone this repository, and push it to dotCloud::
 
-  $ git clone git://github.com/Donaldd/wordpress-on-dotcloud.git
-  $ cd wordpress-on-dotcloud
-  $ echo "<?php" > wordpress/wp-salt.php ; curl https://api.wordpress.org/secret-key/1.1/salt/ >> wordpress/wp-salt.php
-  $ dotcloud create mywordpressapp 
-  $ dotcloud push
+  git clone git://github.com/Donaldd/wordpress-on-dotcloud.git
+  cd wordpress-on-dotcloud
+  echo "<?php" > wordpress/wp-salt.php ; curl https://api.wordpress.org/secret-key/1.1/salt/ >> wordpress/wp-salt.php
+  dotcloud create mywordpressapp 
+  dotcloud push
 
 Your Wordpress site is now running on dotCloud, to finalize your Wordpress setup 
 simply run::
-  $ dotcloud open
+  dotcloud open
 
 Happy hacking!
 
