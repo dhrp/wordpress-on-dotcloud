@@ -22,14 +22,14 @@ $env = json_decode(file_get_contents("/home/dotcloud/environment.json"), true);
 define('DB_NAME', 'wordpress');
 
 /** MySQL database username */
-define('DB_USER', $env['DOTCLOUD_DB_MYSQL_LOGIN']);
+define('DB_USER', 'root');
 
 /** MySQL database password */
 define('DB_PASSWORD', $env['DOTCLOUD_DB_MYSQL_PASSWORD']);
 
 /** MySQL hostname */
-define('DB_HOST', $env['DOTCLOUD_DB_MYSQL_HOST']);
-define('DB_PORT', $env['DOTCLOUD_DB_MYSQL_PORT']);
+define('DB_HOST', $env['DOTCLOUD_DB_MYSQL_HOST'].':'.$env['DOTCLOUD_DB_MYSQL_PORT']);
+
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -46,15 +46,19 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
 
+require('wp-salt.php');
+
+/**
+* define('AUTH_KEY',         'put your unique phrase here');
+* define('SECURE_AUTH_KEY',  'put your unique phrase here');
+* define('LOGGED_IN_KEY',    'put your unique phrase here');
+* define('NONCE_KEY',        'put your unique phrase here');
+* define('AUTH_SALT',        'put your unique phrase here');
+* define('SECURE_AUTH_SALT', 'put your unique phrase here');
+* define('LOGGED_IN_SALT',   'put your unique phrase here');
+* define('NONCE_SALT',       'put your unique phrase here');
+*/
 /**#@-*/
 
 /**

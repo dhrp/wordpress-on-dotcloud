@@ -1,21 +1,20 @@
 Wordpress on dotCloud
 ==================
 
-This is the easiest way to launch a Wordpress website on dotCloud it takes 
-less than 2 minutes to get your Wordpress site in the Cloud.
-It works out of the box follow these easy steps and in the end you'll have
-your Wordpress site running on dotCloud.
+This is the easiest way to launch a Wordpress website on dotCloud, it takes less than 2 minutes to get your Wordpress site in the Cloud.
+It works out of the box, just follow these easy steps and in the end you'll have our Wordpress site running on dotCloud.
 
 To run this code on dotCloud, you need a FREE `dotCloud account
 <https://www.dotcloud.com/register.html>`_ .
 
-Install our `CLI
+Install the `CLI
 <http://docs.dotcloud.com/0.9/firststeps/install/>`_ 
 (Command Line Interface)
 Then clone this repository, and push it to dotCloud::
 
   $ git clone git://github.com/Donaldd/wordpress-on-dotcloud.git
   $ cd wordpress-on-dotcloud
+  $ echo "<?php" > wordpress/wp-salt.php ; curl https://api.wordpress.org/secret-key/1.1/salt/ >> wordpress/wp-salt.php
   $ dotcloud create mywordpressapp 
   $ dotcloud push
 
