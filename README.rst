@@ -1,8 +1,7 @@
 Wordpress on dotCloud
 =====================
 
-Currently working!!! Don't hesitate to contact my when something breaks or needs an update. 
--------------------------------------------------------------------------------------------
+Currently working!!! Don't hesitate to contact me when something breaks or needs an update. 
 
 This is the easiest way to launch a Wordpress website on dotCloud, it takes less than 2 minutes to get your Wordpress site in the Cloud.
 It works out of the box, just follow these easy steps and in the end you'll have our Wordpress site running on dotCloud.
