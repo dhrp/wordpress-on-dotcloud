@@ -32,4 +32,4 @@ You can also learn more by diving into `dotCloud documentations
 <http://docs.dotcloud.com/0.9/services/mysql/>`_ which is used by this app.
 
 Feel free to also check out my `Blog
-<http://www.donckers.com/>`_
+<http://www.donckers.co/>`_
