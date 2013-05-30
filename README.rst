@@ -8,16 +8,19 @@ It should work out of the box, just follow these easy steps and in the end you'l
 1. Install the `CLI <http://docs.dotcloud.com/0.9/firststeps/install/>`_ (Command Line Interface)
 
 2. Clone this repository
-   ```
-   git clone git://github.com/Donaldd/wordpress-on-dotcloud.git
-   ```
+   
+   .. code-block::
+
+      git clone git://github.com/Donaldd/wordpress-on-dotcloud.git
+   
 
 3. Create a new file (wp-salt.php) with the salt which will be used for encrypting passwords, be careful to do this only once for a new site.
    
-   ```
-   cd wordpress-on-dotcloud
-   ./create-salt.sh
-   ```
+   .. code-block::
+   
+      cd wordpress-on-dotcloud
+      ./create-salt.sh
+   
 
 4. Setup your local environment (optional)
 
@@ -27,8 +30,10 @@ It should work out of the box, just follow these easy steps and in the end you'l
 
 5. Upload it!
 
-   dotcloud create wordpress 
-   dotcloud push
+   .. code-block::
+
+      dotcloud create wordpress 
+      dotcloud push
    
 6. Check the site
    dotcloud open
@@ -38,13 +43,14 @@ You should install themes and plugins locally and then push them to dotCloud. Ne
 
 Most likely you will need to modify the permissions on the wp-content settings folder in order to allow Wordpress to download and install files themes and plugins automatically. for me, setting 
 
-```
-cd wordpress
-chown -R me:_www wp-content 
-chmod -R 774 wp-content 
+.. code-block::
+
+   cd wordpress
+   chown -R me:_www wp-content 
+   chmod -R 774 wp-content 
 
 does the trick. Replace me by your username.
-```
+
 
 
 Happy blogging!
